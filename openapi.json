@@ -1,0 +1,73 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "DLG API",
+    "description" : "API returns the sum of a list of numbers",
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "/"
+  } ],
+  "paths" : {
+    "/total" : {
+      "post" : {
+        "summary" : "Returns the sum of the list of numbers provided.",
+        "description" : "Returns the sum of the list of numbers provided.",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/listOfNumbers"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Ok",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/total"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Please only use int/floats in your list of numbers"
+          },
+          "500" : {
+            "description" : "Internal server error"
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "listOfNumbers" : {
+        "required" : [ "listOfNumbers" ],
+        "type" : "object",
+        "properties" : {
+          "listOfNumbers" : {
+            "type" : "array",
+            "example" : [ 1, 2, 10 ],
+            "items" : {
+              "type" : "integer"
+            }
+          }
+        }
+      },
+      "total" : {
+        "required" : [ "total" ],
+        "type" : "object",
+        "properties" : {
+          "total" : {
+            "type" : "integer",
+            "example" : 13
+          }
+        }
+      }
+    }
+  }
+}

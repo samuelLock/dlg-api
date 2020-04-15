@@ -1,6 +1,6 @@
 Synopsis: A REST API built using Flask that receives a list of numbers contained in a JSON body and returns the sum of that list of numbers.
-The Swagger page for the API can be found at: .
-The Swagger json file can be found at the root of this directory too.
+The Swagger page for the API can be found at: https://app.swaggerhub.com/apis/samlock75/dlg-api/1.0.0.
+The OpenAPI json file can be found at the root of this directory too.
 
 The project can be deployed locally in a Docker container or deployed to an existing ECS cluster.
 
