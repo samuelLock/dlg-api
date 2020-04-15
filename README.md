@@ -16,12 +16,12 @@ How To Use:
         . Build the docker image and push it to the ECR repo. (https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html)
 
 Limitations:
-    -   The pipelines requires the ECS environment to already be set up. (See https://github.com/samuelLock/poke-ye-mon-infrastructure)
+    -   The pipelines requires the ECS environment to already be set up. (See https://github.com/samuelLock/dlg-api-infrastructure)
     -   The call to ECR to get the RepositoryID expects there to only be one repository. If there are multiple, the image will be pushed to the zero-indexed repository returned using the CLI.
 
     Local Deployment:
     How To Use:
         -   You can run the flask app directly using 'flask run' when in the root directory of the repo.
-        -   A docker image can be built using 'docker build -t pok-ye-mon' (Docker must be installed).
+        -   A docker image can be built using 'docker build -t dlg-api' (Docker must be installed).
         -   A standard 'docker run' command can then be executed to produce a local docker deployment of the API.
 
